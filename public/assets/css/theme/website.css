@@ -1,0 +1,42 @@
+body {
+    min-height: 2000px;
+    background: #f5f5f5;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+.navbar-custom{
+    background: #ffffff;
+    border-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    border-radius: 0!important;
+}
+
+.navbar-toggle{
+    background-color: rgb(66, 176, 220);
+}
+.navbar-toggle .icon-bar{
+    background: #ffffff;
+}
+
+.navbar-collapse{
+    background: #ffffff;
+}
+
+@media (min-width: 768px){
+    .navbar-brand {
+        float: left;
+        height: 70px;
+        padding: 25px 25px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .navbar-custom{
+        height: 70px;
+    }
+    .navbar-nav>li>a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
