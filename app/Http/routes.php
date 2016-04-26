@@ -11,9 +11,8 @@
 |
 */
 
-use App\Providers\ConektaServiceProvider;
+
 Route::get('/', function () {
-    dd(ConektaServiceProvider::sandboxCargo());
     return view('welcome');
 });
 
