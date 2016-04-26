@@ -16,6 +16,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix'=>'test'], function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+});
+
 
 Route::get('auth/{proveedor?}', ['as'=>'auth', 'uses'=>'Auth\SocialAuthController@proveedor']);
 Route::get('auth/callback/{proveedor?}', ['as'=>'auth.callback.facebook', 'uses'=>'Auth\SocialAuthController@callbackProveedor']);
