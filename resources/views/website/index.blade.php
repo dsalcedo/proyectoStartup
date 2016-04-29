@@ -53,28 +53,6 @@
         </div>
 
     </div> <!-- /container -->
-    <style>
-        .modal-login .modal-header{
-            padding: 0;
-        }
-        .modal-login .modal-header .cover{
-            position: absolute;
-            width: 100%;
-            height: 218px;
-            background: rgba(0, 0, 0, 0.48);
-        }
-        .modal-login .modal-header img{
-            border-radius: 5px 5px 0 0;
-        }
-        .modal-login .modal-header h4{
-            position: absolute;
-            width: 100%;
-            margin-top: 80px;
-            color: #ffffff;
-            z-index: 9999;
-            text-transform: uppercase;
-        }
-    </style>
     <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -89,21 +67,24 @@
                     <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
                 </div>
                 <div class="modal-body text-center">
-                    PARA CONTINUAR DEBES INICIAR SESIÓN CON
-                    <br>
-                    <a href="" class="btn btn-round-link btn-fb">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        Facebook
-                    </a>
-                    <a href="" class="btn btn-round-link btn-twitter">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        Twitter
-                    </a>
+                    Inicia sesión con alguna de las redes sociales
+                    <div class="row social-network-block">
+                        <div class="col-md-6">
+                            <a href="{{route('auth.social')}}/facebook" class="btn btn-lg-custom btn-round-link btn-fb">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                Facebook
+                            </a></div>
+                        <div class="col-md-6">
+                            <a href="{{route('auth.social')}}/twitter" class="btn btn-lg-custom btn-round-link btn-twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <span data-dismiss="modal">cerrar</span>
                 </div>
             </div>
         </div>
