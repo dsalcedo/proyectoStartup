@@ -8,6 +8,9 @@ use App\Http\Requests;
 
 class WebsiteController extends Controller
 {
+    /**
+     * @return mixed
+     */
     public function index(){
         return view('website.index');
     }
