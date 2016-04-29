@@ -3,3 +3,7 @@
 body{
   background-color: #000000;
 }
+
+.navbar-nav li a:focus{
+  outline: 0;
+}
