@@ -3,11 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Page 1</title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css" />
+
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
         {{ Html::style('assets/css/font-awesome.css') }}
@@ -44,6 +47,7 @@
 
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
+            <div id="mapa" style="width:100%; height: 200px;"></div>
             <h1>Navbar example</h1>
             <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
             <p>To see the difference between static and fixed top navbars, just scroll.</p>
