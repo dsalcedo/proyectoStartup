@@ -53,6 +53,16 @@
         </div>
 
     </div> <!-- /container -->
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <h2>¿OFRECES UNA HABITACIÓN?</h2>
+            <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-lg-custom btn-round-link btn-marketing">
+                ¡ANUNCIATE GRATIS!
+            </a>
+            </br>
+            <a href="#" class="block-text" data-toggle="modal" data-target="#myModal">YA TENGO UNA CUENTA</a>
+        </div>
+    </div>
     <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -68,7 +78,7 @@
                 </div>
                 <div class="modal-body text-center">
                     Inicia sesión con alguna de las redes sociales
-                    <div class="row social-network-block">
+                    <div class="row social-network-block" style="margin-top: 30px;">
                         <div class="col-md-6">
                             <a href="{{route('auth.social')}}/facebook" class="btn btn-lg-custom btn-round-link btn-fb">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -79,6 +89,10 @@
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                                 Twitter
                             </a>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 30px;">
+                            <p>NO COMPARTIREMOS NADA SIN TU AUTORIZACIÓN.</br>
+                            AL CONTINUAR ACEPTAS NUESTROS TÉRMINOS Y CONDICIONES.</p>
                         </div>
                     </div>
 
