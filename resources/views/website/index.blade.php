@@ -1,116 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+@extends('website.header')
+@section('title', $titulo)
 
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Page 1</title>
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css" />
-
-        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-        {{ Html::style('assets/css/font-awesome.css') }}
-        {{ Html::style('assets/css/bootstrap.min.css') }}
-        {{ Html::style('assets/css/bootstrap-social.css') }}
-        {{ Html::style('assets/css/theme/website.css') }}
-    </head>
-    <body>
-
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-custom navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar sesión</a></li>
-                    <li><a href="./" style="background: #f6f037;">¡Quiero unirme!</a></li>
-
-                </ul>
-            </div><!--/.nav-collapse -->
+@section('content')
+    <div class="jumbotron cover-main">
+        <div class="mask-cover"></div>
+        <div class="container text-center">
+            <span class="col-md-12 cover-main-text">
+                Descubre mil y un lugares para vivir
+                <br>o<br>
+                ¡Comparte depa con roomies increibles!
+            </span>
         </div>
-    </nav>
+    </div>
 
-    <div class="container">
-
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <div id="mapa" style="width:100%; height: 200px;"></div>
-            <h1>Navbar example</h1>
-            <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-            <p>To see the difference between static and fixed top navbars, just scroll.</p>
-            <p>
-                <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-            </p>
-        </div>
-
-    </div> <!-- /container -->
     <div class="container">
         <div class="col-md-12 text-center">
-            <h2>¿OFRECES UNA HABITACIÓN?</h2>
-            <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-lg-custom btn-round-link btn-marketing">
-                ¡ANUNCIATE GRATIS!
+            <h2>¿OFRECES UN DEPA, UNA CASA O UNA HABITACIÓN?</h2>
+            <a href="{{route('website.partners')}}" class="btn btn-lg-custom btn-round-link btn-marketing">
+                ¡ANÚNCIATE, ES GRATIS!
             </a>
             </br>
             <a href="#" class="block-text" data-toggle="modal" data-target="#myModal">YA TENGO UNA CUENTA</a>
         </div>
     </div>
-    <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center" id="myModalLabel">
-                        Descubre mil y un lugares para vivir</br>
-                        ó</br>
-                        comparte depa con roomies increíbles
-                    </h4>
-                    <div class="cover"></div>
-                    <img src="https://35ht6t2ynx0p1ztf961h81r1-wpengine.netdna-ssl.com/wp-content/uploads/2014/12/HERO-Housing-photos-with-students-118.jpg" class="img-responsive">
-                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-                </div>
-                <div class="modal-body text-center">
-                    Inicia sesión con alguna de las redes sociales
-                    <div class="row social-network-block" style="margin-top: 30px;">
-                        <div class="col-md-6">
-                            <a href="{{route('auth.social')}}/facebook" class="btn btn-lg-custom btn-round-link btn-fb">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                Facebook
-                            </a></div>
-                        <div class="col-md-6">
-                            <a href="{{route('auth.social')}}/twitter" class="btn btn-lg-custom btn-round-link btn-twitter">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                Twitter
-                            </a>
-                        </div>
-                        <div class="col-md-12" style="margin-top: 30px;">
-                            <p>NO COMPARTIREMOS NADA SIN TU AUTORIZACIÓN.</br>
-                            AL CONTINUAR ACEPTAS NUESTROS TÉRMINOS Y CONDICIONES.</p>
-                        </div>
-                    </div>
+@endsection
 
-                </div>
-                <div class="modal-footer">
-                    <span data-dismiss="modal">cerrar</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
+@push("scripts")
     <script>
         var customDeps = ['app/test'];
     </script>
-    <script src="{{ URL::asset('assets/require.js') }}" data-main="{{URL::asset('assets/conf.js')}}"></script>
-    </body>
-</html>
+@endpush

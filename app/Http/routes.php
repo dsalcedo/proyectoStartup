@@ -13,9 +13,10 @@
 
 
 Route::get('/', ['as'=>'website.index', 'uses'=>'WebsiteController@index']);
+Route::get('partners', ['as'=>'website.partners', 'uses'=>'WebsiteController@partners']);
 
-Route::group(['prefix'=>'test'], function(){
-
+Route::group(['prefix'=>'app', 'middleware'=>'auth'], function(){
+    Route::get('/',['as'=>'app.index', 'uses'=>'Webapp\AppController@index']);
 });
 
 
