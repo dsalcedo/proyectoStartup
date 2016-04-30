@@ -9,6 +9,16 @@ use App\Http\Requests;
 class WebsiteController extends Controller
 {
     public function index(){
-        return view('website.index');
+        $titulo = "Website title";
+        $args   = compact('titulo');
+
+        return view('website.index', $args);
+    }
+
+    public function partners(){
+        $titulo = "Partners";
+        $args   = compact('titulo');
+
+        return view('website.partners', $args);
     }
 }
