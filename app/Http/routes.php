@@ -14,9 +14,12 @@
 
 Route::get('/', ['as'=>'website.index', 'uses'=>'WebsiteController@index']);
 Route::get('partners', ['as'=>'website.partners', 'uses'=>'WebsiteController@partners']);
+Route::get('acerca', ['as'=>'website.acerca', 'uses'=>'WebsiteController@acerca']);
+Route::get('terminos-y-condiciones', ['as'=>'website.tos', 'uses'=>'WebsiteController@terminosCondiciones']);
 
 Route::group(['prefix'=>'app', 'middleware'=>'auth'], function(){
     Route::get('/',['as'=>'app.index', 'uses'=>'Webapp\AppController@index']);
+    Route::get('desconectarme',['as'=>'app.desconectar', 'uses'=>'Webapp\AppController@desconectarme']);
 });
 
 

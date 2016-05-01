@@ -21,4 +21,20 @@ class WebsiteController extends Controller
 
         return view('website.partners', $args);
     }
+
+    public function acerca()
+    {
+        $titulo = "Acerca";
+        $args   = compact('titulo');
+
+        return view('website.acerca', $args);
+    }
+
+    public function terminosCondiciones()
+    {
+        $titulo = "Términos y condiciones del servicio";
+        $args   = compact('titulo');
+
+        return view('website.tos', $args);
+    }
 }
