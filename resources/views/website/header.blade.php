@@ -35,7 +35,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar sesión</a></li>
-                        <li><a href="./" style="background: #f6f037;">¡Quiero unirme!</a></li>
+                        <li><a href="" style="background: #f6f037;">¡Quiero unirme!</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
