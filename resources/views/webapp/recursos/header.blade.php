@@ -18,6 +18,7 @@
     {{ Html::style('assets/css/theme/app.css') }}
 </head>
 <body>
+
 <!-- Static navbar -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container">
@@ -31,10 +32,9 @@
             <a class="navbar-brand" href="{{route('website.index')}}">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar sesión</a></li>
-                <li><a href="./" style="background: #f6f037;">¡Quiero unirme!</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Quiero buscar</a></li>
+                <li><a href="./" style="background: #f6f037;">¡Crear un anuncio!</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -47,11 +47,11 @@
                 <div class="profile-image">
                     <img src="{{$usuario->avatar_imagen}}" class="image">
                     @if($usuario->verificado)
-                        <span class="badge-verified text-center" data-toggle="tooltip" data-placement="right" title="Verificado">
+                        <span class="badge-verified text-center" data-toggle="tooltip" data-placement="left" title="Verificado">
                             <i class="fa fa-check-circle" aria-hidden="true"></i>
                         </span>
                     @else
-                        <span class="badge-no-verified text-center" data-toggle="tooltip" data-placement="right" title="No verificado">
+                        <span class="badge-no-verified text-center" data-toggle="tooltip" data-placement="left" title="No verificado">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                         </span>
                     @endif
@@ -76,19 +76,12 @@
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Reports</a></li>
                 <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
+
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">Nav item</a></li>
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
-                <li><a href="">More navigation</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
+                <li><a href="{{route('website.acerca')}}" target="_blank">Acerca</a></li>
+                <li><a href="{{route('website.tos')}}" target="_blank">Términos y condiciones</a></li>
+                <li><a href="{{route('app.desconectar')}}">Desconectarme</a></li>
             </ul>
         </div>
 

@@ -20,6 +20,15 @@ body {
     color: #55acee;
 }
 /*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+
+/*
  * Sidebar
  */
 
@@ -58,7 +67,18 @@ body {
 .profile-name a:focus{
     color: #ffe42a;
 }
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #CDD2DA;
+}
+
 @media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
     .sidebar {
         position: fixed;
         top: 51px;
@@ -144,16 +164,3 @@ body {
 }
 
 
-/*
- * Main content
- */
-
-.main {
-    padding: 20px;
-}
-@media (min-width: 768px) {
-    .main {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-}
