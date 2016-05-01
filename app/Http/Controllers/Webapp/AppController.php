@@ -17,6 +17,10 @@ class AppController extends Controller
 
     public function index()
     {
-        dd($this->usuario);
+        $titulo  = "app dashboard";
+        $usuario = $this->usuario;
+        //dd($usuario);
+        $args    = compact('titulo', 'usuario');
+        return view('webapp.index', $args);
     }
 }

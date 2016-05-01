@@ -1,9 +1,159 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+body {
+  padding-top: 50px;
+  background: #dde1e7;
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar-fixed-top {
+  border: 0;
+}
+.block{
+  display: block;
+}
+.facebook-color,
+.twitter-color{
+  font-size: 17px;
+}
+.facebook-color{
+  color: #4e69a2;
+}
+.twitter-color{
+  color: #55acee;
+}
+/*
+ * Sidebar
+ */
 
-body{
-  background-color: #000000;
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+.cover-up{
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top:0;
+  z-index: -1;
+}
+.cover-up img{
+  width: 100%!important;
+  height: 100%;
+}
+.profile-name{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.profile-name a.internal-link{
+  display: block;
+  color: #fff;
+  text-shadow: 1px 2px #000000;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.profile-name a:hover,
+.profile-name a:focus{
+  color: #ffe42a;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+  .sidebar .profile-material{
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    height: 186px;
+  }
+  .sidebar .profile-material .profile-image{
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .sidebar .profile-material .profile-image .badge-verified{
+    position: absolute;
+    display : block;
+    border-radius: 100%;
+    top: 94px;
+    right: 65px;
+    background: #fff;
+    width  : 21px;
+    height : 21px;
+    padding: 2px;
+  }
+  .badge-verified i{
+    font-size: 18px;
+    color: #5890FF;
+  }
+  .sidebar .profile-material .profile-image .badge-no-verified{
+    position: absolute;
+    display : block;
+    border-radius: 100%;
+    top: 94px;
+    right: 65px;
+    background: #fff;
+    width  : 21px;
+    height : 21px;
+    padding: 2px;
+  }
+  .badge-no-verified i{
+    font-size: 18px;
+    color: #525252;
+  }
+  .sidebar .profile-material img.image{
+    width: 50%;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    z-index: 999999;
+  }
+
 }
 
-.navbar-nav li a:focus{
-  outline: 0;
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }

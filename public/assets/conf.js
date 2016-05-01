@@ -27,5 +27,8 @@ if (window.location.hash == '#_=_'){
 var basicDeps = ['jquery','bootstrap','leaflet'];
 //var all = basicDeps.concat(customDeps);
 requirejs(basicDeps, function() {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
     requirejs(customDeps);
 });
