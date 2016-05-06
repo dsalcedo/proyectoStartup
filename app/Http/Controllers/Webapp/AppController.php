@@ -17,6 +17,9 @@ class AppController extends Controller
         $this->req = $request;
     }
 
+    /**
+     * @return mixed
+     */
     public function index()
     {
         $titulo  = "app dashboard";
@@ -26,8 +29,33 @@ class AppController extends Controller
         return view('webapp.index', $args);
     }
 
+    /**
+     * @return mixed
+     */
     public function desconectarme(){
         $this->auth->logout();
         return redirect('/');
     }
+
+    /**
+     * @return mixed
+     */
+    public function crearAnuncio()
+    {
+        $titulo  = "Crear anuncio";
+        $usuario = $this->usuario;
+
+        $args    = compact('titulo', 'usuario');
+        return view('webapp.crear-anuncio', $args);
+    }
+    
+    public function buscar(){
+        $titulo  = "Buscar";
+        $usuario = $this->usuario;
+
+        $args    = compact('titulo', 'usuario');
+        return view('webapp.buscar', $args);
+    }
+
+
 }

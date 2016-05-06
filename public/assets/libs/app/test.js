@@ -14,7 +14,7 @@ define(function () {
         maxZoom: 18
     }).addTo(map);
 
-     map.locate({setView: true, maxZoom: 16});
+    map.locate({setView: true, maxZoom: 16});
     function onLocationFound(e) {
         var radius = e.accuracy / 2;
 

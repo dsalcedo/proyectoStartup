@@ -129,6 +129,11 @@ a.btn-marketing:hover{
     position: absolute;
 }
 
+.mapa{
+    width: 100%;
+    height: 300px;
+}
+
 @media (max-width: 767px){
     .cover-main-text{
         top: 140px!important;

@@ -24,6 +24,7 @@ if (window.location.hash == '#_=_'){
         : window.location.hash = '';
 }
 
+//var basicDeps = ['jquery','bootstrap','leaflet'];
 var basicDeps = ['jquery','bootstrap','leaflet'];
 //var all = basicDeps.concat(customDeps);
 requirejs(basicDeps, function() {
