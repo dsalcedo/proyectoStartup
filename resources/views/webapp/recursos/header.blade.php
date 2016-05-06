@@ -33,8 +33,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#myModal">Quiero buscar</a></li>
-                <li><a href="./" style="background: #f6f037;">¡Crear un anuncio!</a></li>
+                <li><a href="{{route('app.buscar')}}">Quiero buscar</a></li>
+                <li><a href="{{route('app.crearAnuncio')}}" style="background: #f6f037;">¡Crear un anuncio!</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -92,6 +92,7 @@
 </div>
 
 @stack('scripts')
+
 <script src="{{ URL::asset('assets/require.js') }}" data-main="{{URL::asset('assets/conf.js')}}"></script>
 </body>
 </html>

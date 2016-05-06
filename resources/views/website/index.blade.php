@@ -12,7 +12,11 @@
             </span>
         </div>
     </div>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div id="mapa" class="mapa"></div>
+        </div>
+    </div>
     <div class="container">
         <div class="col-md-12 text-center">
             <h2>¿OFRECES UN DEPA, UNA CASA O UNA HABITACIÓN?</h2>
@@ -27,6 +31,6 @@
 
 @push("scripts")
     <script>
-        var customDeps = ['app/test'];
+        var customDeps = ['app/websiteIndex.js'];
     </script>
 @endpush
