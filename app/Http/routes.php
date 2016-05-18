@@ -13,12 +13,14 @@
 
 
 Route::get('/', ['as'=>'website.index', 'uses'=>'WebsiteController@index']);
-Route::get('partners', ['as'=>'website.partners', 'uses'=>'WebsiteController@partners']);
+Route::get('socios', ['as'=>'website.socios', 'uses'=>'WebsiteController@socios']);
 Route::get('acerca', ['as'=>'website.acerca', 'uses'=>'WebsiteController@acerca']);
 Route::get('terminos-y-condiciones', ['as'=>'website.tos', 'uses'=>'WebsiteController@terminosCondiciones']);
 
 Route::get('auth/{proveedor?}', ['as'=>'auth.social', 'uses'=>'Auth\SocialAuthController@proveedor']);
 Route::get('auth/callback/{proveedor?}', ['as'=>'auth.callback.facebook', 'uses'=>'Auth\SocialAuthController@callbackProveedor']);
+
+Route::get('busqueda', ['as'=>'app.busqueda', 'uses'=>'Webapp\AppController@busqueda']);
 
 Route::group(['prefix'=>'app', 'middleware'=>'auth'], function(){
     Route::get('/',['as'=>'app.index', 'uses'=>'Webapp\AppController@index']);

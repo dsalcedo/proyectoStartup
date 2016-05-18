@@ -57,5 +57,11 @@ class AppController extends Controller
         return view('webapp.buscar', $args);
     }
 
+    public function busqueda(){
+        $titulo  = "Buscar";
+        $usuario = $this->usuario;
 
+        $args    = compact('titulo', 'usuario');
+        return view('webapp.buscar', $args);
+    }
 }

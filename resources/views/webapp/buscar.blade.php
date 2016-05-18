@@ -1,21 +1,11 @@
-@extends('webapp.recursos.header')
+@extends('webapp.recursos.header-busqueda')
 @section('title', $titulo)
 
 @section('content')
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ">
-
-        <div class="col-md-12">
-            <h1 class="page-header">¡Vamos a crear un anuncio!</h1>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="page-content">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="col-md-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, aut beatae culpa delectus, dolor dolorem doloremque expedita facilis ipsa ipsam libero maiores maxime pariatur quas, qui reiciendis saepe sequi voluptas?
     </div>
+    <div class="col-md-6">right</div>
 @endsection
 
 @push("scripts")

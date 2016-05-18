@@ -17,6 +17,8 @@
         {{ Html::style('assets/css/bootstrap.min.css') }}
         {{ Html::style('assets/css/bootstrap-social.css') }}
         {{ Html::style('assets/css/theme/website.css') }}
+        {{ Html::style('assets/libs/leaflet/marker-cluster/MarkerCluster.css') }}
+        {{ Html::style('assets/libs/leaflet/marker-cluster/MarkerCluster.Default.css') }}
     </head>
     <body>
         <!-- Static navbar -->
@@ -42,6 +44,16 @@
         </nav>
 
         @yield('content')
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">
+                    <span class="pull-right">
+                        Hecho con <i class="fa fa-heart" aria-hidden="true" style="color:#F13779;"></i> en México.
+                    </span>
+                </p>
+            </div>
+        </footer>
 
         <!-- Modal -->
         <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -3,7 +3,8 @@ requirejs.config({
     paths: {
         jquery: 'jquery/jquery.min',
         bootstrap: 'bootstrap/bootstrap.min',
-        leaflet: "leaflet/leaflet-src"
+        leaflet: "leaflet/leaflet-src",
+        leafletCluster: "leaflet/marker-cluster/leaflet.markercluster-src"
     },
     shim: {
         'jquery': {
@@ -14,6 +15,10 @@ requirejs.config({
         },
         leaflet: {
             exports: 'L'
+        },
+        leafletCluster:{
+            exports : 'L',
+            deps : ['leaflet']
         }
     }
 });
@@ -25,7 +30,7 @@ if (window.location.hash == '#_=_'){
 }
 
 //var basicDeps = ['jquery','bootstrap','leaflet'];
-var basicDeps = ['jquery','bootstrap','leaflet'];
+var basicDeps = ['jquery','bootstrap','leaflet', 'leafletCluster'];
 //var all = basicDeps.concat(customDeps);
 requirejs(basicDeps, function() {
     $(function () {

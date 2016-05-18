@@ -18,11 +18,11 @@ class WebsiteController extends Controller
         return view('website.index', $args);
     }
 
-    public function partners(){
-        $titulo = "Partners";
+    public function socios(){
+        $titulo = "Socios";
         $args   = compact('titulo');
 
-        return view('website.partners', $args);
+        return view('website.socios', $args);
     }
 
     public function acerca()
