@@ -1,4 +1,4 @@
-@extends('website.header')
+@extends('website.app')
 @section('title', $titulo)
 
     @section('content')
