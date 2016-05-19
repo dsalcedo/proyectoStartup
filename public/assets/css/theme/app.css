@@ -25,6 +25,9 @@ body {
     padding: 15px;
     margin-bottom: 15px;
 }
+.card-margin{
+    margin-bottom: 15px;
+}
 .full-height{
     position: fixed;
     height: 100%;
@@ -197,18 +200,87 @@ body {
 .room_depa {
   background-position: -210px 0; }
 
+.thumbnail .precio{
+    font-size: 24px;
+}
+.thumbnail .direccion{
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 /*
 * RESPONSIVE WEBSITE
 */
+
 @media (max-width: 767px) {
     .hide-mobile{
         display: none;
     }
+    .thumbnail .caption{
+        display: block;
+        min-height: 100px;
+    }
+    .thumbnail .profile-image {
+        width: 25%;
+        display: inline-block;
+        float: left;
+    }
+    .thumbnail  img.image {
+        width: 100%;
+        border-radius: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        z-index: 999999;
+    }
+    .thumbnail .precio{
+        display: inline-block;
+        padding-top: 30px;
+        padding-left: 10px;
+        margin-top: 0;
+        min-height: 78px;
+        float: left;
+        width: 75%;
+    }
+    .thumbnail .direccion{
+        display: block;
+        width: 100%;
+    }
 }
+
+
 @media (min-width: 768px) {
+    .thumbnail .profile-image {
+        width: 100%;
+        display: block;
+        margin-top: -50px;
+    }
+    .thumbnail  img.image {
+        width: 25%;
+        border-radius: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        z-index: 999999;
+    }
+   .thumbnail .profile-image .badge-no-verified {
+        position: absolute;
+        display: block;
+        border-radius: 100%;
+        top: 200px;
+        right: 120px;
+        background: #fff;
+        width: 21px;
+        height: 21px;
+        padding: 2px;
+    }
     .row-full{
         margin-left: -45px;
         margin-right: -45px;
+        display: block;
     }
   .main {
     padding-right: 40px;
@@ -284,7 +356,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid rgba(255, 255, 255, 0.5);
-    z-index: 999999; } }
+    z-index: 999999; }
+
+}
 
 .nav-sidebar {
   margin-right: -21px;
