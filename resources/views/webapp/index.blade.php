@@ -9,6 +9,6 @@
 
 @push("scripts")
 <script>
-    var customDeps = ['app/test'];
+    var customDeps = ['app/test', 'app/mora'];
 </script>
 @endpush

@@ -4,7 +4,8 @@ requirejs.config({
         jquery: 'jquery/jquery.min',
         bootstrap: 'bootstrap/bootstrap.min',
         leaflet: "leaflet/leaflet-src",
-        leafletCluster: "leaflet/marker-cluster/leaflet.markercluster-src"
+        leafletCluster: "leaflet/marker-cluster/leaflet.markercluster-src",
+        dataTables: 'https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js'
     },
     shim: {
         'jquery': {
@@ -19,6 +20,9 @@ requirejs.config({
         leafletCluster:{
             exports : 'L',
             deps : ['leaflet']
+        },
+        dataTables:{
+            deps:['jquery']
         }
     }
 });
