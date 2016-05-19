@@ -40,14 +40,10 @@
     </div>
 </nav>
 
-<div class="container-fluid container-app">
-    <div class="row">
-        @yield('content')
-    </div>
-</div>
+@yield('content')
 
 @stack('scripts')
-
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false" async defer></script>
 <script src="{{ URL::asset('assets/require.js') }}" data-main="{{URL::asset('assets/conf.js')}}"></script>
 </body>
 </html>
