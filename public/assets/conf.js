@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: 'assets/libs',
+    baseUrl: '/assets/libs',
     paths: {
         jquery: 'jquery/jquery.min',
         bootstrap: 'bootstrap/bootstrap.min',
