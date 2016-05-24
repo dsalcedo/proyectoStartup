@@ -522,6 +522,31 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
 <script src="{{ URL::asset('assets/require.js') }}" data-main="{{URL::asset('assets/conf.js')}}"></script>
-
+<script>
+    $('#guarda').on('click',function(){
+        document.getElementById('principal').style.display="none";
+        document.getElementById('busqueda').style.display="none";
+        document.getElementById('guardados').style.display="block";
+        document.getElementById('pago').style.display="none";
+    });
+    $('#pagos').on('click',function(){
+        document.getElementById('principal').style.display="none";
+        document.getElementById('busqueda').style.display="none";
+        document.getElementById('guardados').style.display="none";
+        document.getElementById('pago').style.display="block";
+    });
+    $('#miCuenta').on('click',function(){
+        document.getElementById('principal').style.display="block";
+        document.getElementById('busqueda').style.display="none";
+        document.getElementById('guardados').style.display="none";
+        document.getElementById('pago').style.display="none";
+    });
+    $('#busquedas').on('click',function(){
+        document.getElementById('principal').style.display="none";
+        document.getElementById('busqueda').style.display="block";
+        document.getElementById('guardados').style.display="none";
+        document.getElementById('pago').style.display="none";
+    });
+</script>
 </body>
 </html>
