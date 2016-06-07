@@ -32,8 +32,11 @@ class SocialAuthController extends Controller
             return abort('404', 'No existe el proveedor que indicaste.');
         }
 
-        return $this->socialite->with($proveedor)->redirect();
+        if(Auth::check()){
+            return redirect()->route('app.index');
+        }
 
+        return $this->socialite->with($proveedor)->redirect();
     }
 
     /**

@@ -3,7 +3,8 @@ requirejs.config({
     paths: {
         jquery: 'jquery/jquery.min',
         bootstrap: 'bootstrap/bootstrap.min',
-        dataTables: 'https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js'
+        dataTables: 'https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js',
+        accounting: 'accounting/accounting.min'
     },
     shim: {
         'jquery': {

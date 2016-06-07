@@ -90,7 +90,7 @@
 
 @stack('scripts')
 
-<script src="//maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="//maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript" async></script>
 <script src="{{ URL::asset('/assets/require.js') }}" data-main="{{URL::asset('/assets/conf.js')}}"></script>
 
 </body>
