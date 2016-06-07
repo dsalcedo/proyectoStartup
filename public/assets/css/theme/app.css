@@ -1,8 +1,11 @@
 body {
   padding-top: 50px;
   background: #dde1e7;
-  font-family: 'Open Sans', sans-serif; }
-
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar-default{
+    background: #f7f7f7;
+}
 .navbar-fixed-top {
   border: 0;
 }
