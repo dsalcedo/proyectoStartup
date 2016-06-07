@@ -161,7 +161,7 @@ return [
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
     ],
 
@@ -214,7 +214,8 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        
+        'Moloquent'       => Jenssegers\Mongodb\Eloquent\Model::class,
+    
     ],
 
 ];

@@ -11,7 +11,8 @@ class WebsiteController extends Controller
     /**
      * @return mixed
      */
-    public function index(){
+    public function index()
+    {
         $titulo = "Website title";
         $args   = compact('titulo');
 

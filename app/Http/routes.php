@@ -11,6 +11,12 @@
 |
 */
 
+use App\Models\MongoDb\TestModel;
+
+Route::get('mongodb', function(){
+    $test = TestModel::all();
+    return response()->json($test);
+});
 
 Route::get('/', ['as'=>'website.index', 'uses'=>'WebsiteController@index']);
 Route::get('socios', ['as'=>'website.socios', 'uses'=>'WebsiteController@socios']);

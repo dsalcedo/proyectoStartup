@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "laravel/socialite": "^2.0",
         "conekta/conekta-php": "dev-master",
-        "laravelcollective/html": "5.2.*"
+        "laravelcollective/html": "5.2.*",
+        "jenssegers/mongodb": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

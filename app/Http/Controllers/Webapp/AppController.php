@@ -26,7 +26,7 @@ class AppController extends Controller
         $usuario = $this->usuario;
         //dd($usuario);
         $args    = compact('titulo', 'usuario');
-        return view('webapp.index', $args);
+        return view('webapp.v1.index', $args);
     }
 
     /**
